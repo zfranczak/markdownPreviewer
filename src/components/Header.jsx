@@ -1,7 +1,10 @@
-import React from 'react';
-
 const Header = () => {
-  return <header>Markdown Previewer</header>;
+  return (
+    <header className='header'>
+      <h1>Markdown Previewer</h1>
+      <button className='btn'>Like</button>
+    </header>
+  );
 };
 
 export default Header;
