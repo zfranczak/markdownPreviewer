@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Editor from './components/Editor';
 import Header from './components/Header';
 import Previewer from './components/Previewer';
+import './components/marked';
 
 const App = () => {
   const [text, setText] = useState('');
