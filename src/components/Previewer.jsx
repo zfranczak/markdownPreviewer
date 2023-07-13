@@ -1,4 +1,5 @@
 import React from 'react';
+import { Marked } from './marked';
 
 const Previewer = ({ text }) => {
   return (
