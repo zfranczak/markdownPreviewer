@@ -1,12 +1,7 @@
 import React from 'react';
-import { marked } from './Marked';
+import { marked } from 'marked';
 
 const Previewer = ({ text }) => {
-  marked.use({
-    async: true,
-    pedantic: false,
-    gfm: true,
-  });
   return (
     <div className='container outline'>
       <div className='toolbar'>Previewer</div>
