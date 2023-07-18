@@ -4,50 +4,29 @@ import Header from './components/Header';
 import Previewer from './components/Previewer';
 
 const App = () => {
-  const initialText = `# Welcome to my React Markdown Previewer!
+  const initialText = `# Markdown Previewer
 
-  ## This is a sub-heading...
-  ### And here\'s some other cool stuff:
+  ## Sub Header
   
-  Heres some code, \`<div></div>\`, between 2 backticks.
+  This is a [link](https://www.example.com).
+  
+  Inline code: \`const message = 'Hello, World!';\`
   
   \`\`\`
-  // this is multi-line code:
-  
-  function anotherExample(firstLine, lastLine) {
-    if (firstLine == \'\`\`\`\' && lastLine == \'\`\`\`\') {
-      return multiLineCode;
-    }
+  // Code block
+  function add(a, b) {
+    return a + b;
   }
   \`\`\`
   
-  You can also make text **bold**... whoa!
-  Or _italic_.
-  Or... wait for it... **_both!_**
-  And feel free to go crazy ~~crossing stuff out~~.
+  - List item 1
+  - List item 2
   
-  There\'s also [links](https://www.zacharyfranczak.com), and
-  > Block Quotes!
+  > This is a blockquote.
   
-  And if you want to get really crazy, even tables:
+  ![Image](https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg)  
   
-  Wild Header | Crazy Header | Another Header?
-  ------------ | ------------- | -------------
-  Your content can | be here, and it | can be here....
-  And here. | Okay. | I think we get it.
-  
-  - And of course there are lists.
-    - Some are bulleted.
-       - With different indentation levels.
-          - That look like this.
-  
-  
-  1. And there are numbered lists too.
-  1. Use just 1s if you want!
-  1. And last but not least, let's not forget embedded images:
-  
-  ![Doggo](https://images.pexels.com/photos/3487734/pexels-photo-3487734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
-  
+  **Bolded text**
   `;
 
   const [text, setText] = useState(initialText);
@@ -59,7 +38,7 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <Editor onTextChange={handleTextChange} text={text} />
+      <Editor onTextChange={handleTextChange} />
       <Previewer text={text} />
     </div>
   );
